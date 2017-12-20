@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: teal linear-gradient(to top, wheat, firebrick);
+    background-size: cover;
+    background-blend-mode: exclusion;
+}
+
+.lemons {
+    width: 600px;
+    height: 500px;
+    background-image: url('../lemons.svg');
+    background-size: cover;
+}
+
+.salad {
+    width: 700px;
+    height: 500px;
+    background-image: url('../salad.svg');
+    background-size: contain;
+}
+
+.parallax {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-perspective: 1px;
+    perspective: 1px;
+}
+
+.parallax__layer {
+    position: absolute;
+    padding: 100vh 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.parallax__layer--base {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0) translateY(-200px);
+}
+
+.parallax__layer--back {
+    -webkit-transform: translateZ(-1px);
+    transform: translateZ(-1px) scale(2) translateY(300px);
+}
+
+.content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
